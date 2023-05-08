@@ -1,0 +1,13 @@
+﻿@model Product
+<form method="post">
+    <div class="form-group">
+        <input type="hidden" value="@Model.id"/>
+        <label for="email">name:</label>
+        <input type="text" class="form-control" value="@Model.name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="pwd">salary:</label>
+        <input type="number" class="form-control" name="salary" value="@Model.salary">
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+</form>

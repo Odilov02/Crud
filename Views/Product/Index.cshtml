@@ -1,0 +1,29 @@
+﻿@model List<Product>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <a asp-controller="Product" asp-action="Create">Add</a>
+        </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">slary</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.name</td>
+            <td>@item.salary</td>
+            <td><a asp-action="update" asp-route-id="@item.id">Edit</a> </td>
+            <td><a asp-action="delete" asp-route-id="@item.id">Delete</a></td>
+        </tr>
+}
+    </tbody>
+</table>
